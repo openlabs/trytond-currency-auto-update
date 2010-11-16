@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!--
+    This file is part of Tryton. The COPYRIGHT file at the
+    top level of this repository contains the full copyright notices
+    and license terms.
+    -->
+
+<tryton>
+  <data>
+
+    <record model="ir.ui.view" id="currency_update_configuration_form">
+        <field name="model">currency.update_config</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+                <form string="Currency Rate Update Configuration">
+                    <label name="service"/>
+                    <field name="service"/>
+                    <label name="base_currency"/>
+                    <field name="base_currency"/>
+                </form>
+            ]]>
+        </field>
+    </record>
+    <record model="ir.action.act_window" 
+      id="act_currency_configuration_form">
+        <field name="name">Currency Update Configuration</field>
+        <field name="res_model">currency.update_config</field>
+        <field name="view_type">form</field>
+    </record>
+    <record model="ir.action.act_window.view" 
+      id="act_currency_configuration_view1">
+        <field name="sequence" eval="1"/>
+        <field name="view" ref="currency_update_configuration_form"/>
+        <field name="act_window" ref="act_currency_configuration_form"/>
+    </record>
+    <menuitem action="act_currency_configuration_form" 
+      parent="currency.menu_currency"
+      id="menu_currency_rate_config" sequence="0" 
+      icon="tryton-preferences-system"
+      />
+
+  </data>
+</tryton>

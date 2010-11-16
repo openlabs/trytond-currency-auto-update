@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+    This file is part of Tryton. The COPYRIGHT file at the
+    top level of this repository contains the full copyright notices
+    and license terms.
+    -->
+
+<tryton>
+  <data>
+
+    <record model="ir.ui.view" id="currency_view_form"> 
+      <field name="model">currency.currency</field>
+      <field name="type">form</field>
+      <field name="inherit" ref="currency.currency_view_form"/>
+      <field name="arch" type="xml">
+        <![CDATA[
+          <data>
+          <xpath 
+            expr="/form/notebook/page[@id=&quot;rates&quot;]/field[@name=&quot;rate&quot;]" 
+            position="after">
+            <label name="auto_update"/>
+            <field name="auto_update"/>
+          </xpath>
+          </data>
+        ]]>
+      </field>
+    </record>
+
+    <record model="ir.cron" id="currency_update_cron">
+      <field name="name">Currency Rate Update Cron</field>
+      <field name="user" ref="res.user_admin"/>
+      <field name="request_user" ref="res.user_admin"/>
+      <field name="interval_type">days</field>
+      <field name="numbercall" eval="-1"/>
+      <field name="model">currency.currency</field>
+      <field name="function">update_all_currencies</field>
+    </record>
+
+  </data>
+</tryton>
