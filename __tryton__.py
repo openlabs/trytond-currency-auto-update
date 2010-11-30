@@ -4,7 +4,7 @@
 
 {
     'name': 'Currency Auto Update',
-    'version':'1.6.0.1',
+    'version':'1.8.0.2',
     'author': 'Openlabs Technologies & Consulting (P) LTD',
     'email':'info@openlabs.co.in',
     'website': 'http://www.openlabs.co.in/',

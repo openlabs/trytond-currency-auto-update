@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 # This file is part of Tryton.  The COPYRIGHT file at the top level
 # of this repository contains the full copyright notices and license terms.
+# pylint: disable-msg=E1101
 
 from trytond.model import ModelView, ModelSQL, ModelSingleton, fields
 from trytond.pyson import Eval, Bool, Not
@@ -23,11 +24,11 @@ class Configuration(ModelSingleton, ModelSQL, ModelView):
         )
 
 
-    def get_services(self, cursor, user, context=None):
+    def get_services(self):
         """Gets the services from currency.currency
         """
         currency_obj = self.pool.get('currency.currency')
-        return currency_obj.get_services(cursor, user, context)
+        return currency_obj.get_services()
 
 Configuration()
 
