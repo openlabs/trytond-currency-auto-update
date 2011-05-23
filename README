@@ -1,0 +1,47 @@
+trytond_currency_auto_update
+============================
+
+The currency_auto_update module of the Tryton application platform.
+See __tryton__.py
+
+Installing
+----------
+
+See INSTALL
+
+Support
+-------
+
+Developed by Openlabs Technologies and consulting (P) Limited. For issues and 
+bugs related to this module, please report them at:
+
+  https://bitbucket.org/openlabs/trytond-currency-auto-update/
+
+(or)
+
+Contact us at http://www.openlabs.co.in/
+
+
+If you encounter any problems with Tryton, please don't hesitate to ask
+questions on the Tryton bug tracker, mailing list, wiki or IRC channel:
+
+  http://bugs.tryton.org/
+  http://groups.tryton.org/
+  http://wiki.tryton.org/
+  irc://irc.freenode.net/tryton
+
+License
+-------
+
+See LICENSE
+
+Copyright
+---------
+
+See COPYRIGHT
+
+
+For more information please visit the Tryton web site:
+
+  http://www.tryton.org/
+
